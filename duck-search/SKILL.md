@@ -1,6 +1,6 @@
 ---
 name: duck-search
-description: 完全免费的网络搜索技能，使用 DuckDuckGo。无需 API Key，无需注册。适用于搜索网络信息、查找资料、获取链接。Use when: 用户需要搜索网络信息但不想配置 API Key。
+description: 完全免费的多功能网络搜索技能，使用 DuckDuckGo。支持文字/图片/新闻/视频搜索。无需 API Key，无需注册。适用于搜索网络信息、查找图片、获取最新资讯。Use when: 用户需要搜索网络信息、图片、新闻或视频但不想配置 API Key。
 ---
 
 # DuckDuckGo Search Skill
@@ -10,6 +10,7 @@ description: 完全免费的网络搜索技能，使用 DuckDuckGo。无需 API 
 - ✅ **完全免费** - 无需 API Key
 - ✅ **无需注册** - 开箱即用
 - ✅ **隐私保护** - DuckDuckGo 不追踪用户
+- ✅ **多功能** - 支持文字/图片/新闻/视频搜索
 - ✅ **简单易用** - 和普通搜索一样
 
 ## 🛠️ 安装依赖
@@ -22,7 +23,7 @@ pip install duckduckgo_search
 
 ## 📖 使用方法
 
-### 基本搜索
+### 🔍 文字搜索
 
 ```
 "帮我搜索 Python 教程"
@@ -30,24 +31,87 @@ pip install duckduckgo_search
 "搜索 React hooks 文档"
 ```
 
-### 脚本调用
-
+**脚本调用：**
 ```bash
-# 基本搜索
-python scripts/duck_search.py "Python tutorial"
-
-# 指定结果数量
-python scripts/duck_search.py "AI tools" 10
+python scripts/duck_search_enhanced.py text "Python tutorial" 5
 ```
 
-### 输出格式
+### 🖼️ 图片搜索
 
+```
+"帮我找些 Python 相关的图片"
+"搜索 AI 生成的图片"
+"找一些风景壁纸"
+```
+
+**脚本调用：**
+```bash
+python scripts/duck_search_enhanced.py image "Python logo" 5
+```
+
+**输出格式：**
 ```json
 [
   {
-    "title": "页面标题",
+    "type": "image",
+    "title": "图片标题",
+    "image": "https://.../image.jpg",
+    "source": "来源网站",
+    "url": "来源页面"
+  }
+]
+```
+
+### 📰 新闻搜索
+
+```
+"帮我看看最新的 AI 新闻"
+"搜索今天的科技新闻"
+"找关于 Python 的最新消息"
+```
+
+**脚本调用：**
+```bash
+python scripts/duck_search_enhanced.py news "AI news" 5
+```
+
+**输出格式：**
+```json
+[
+  {
+    "type": "news",
+    "title": "新闻标题",
     "url": "https://...",
-    "snippet": "摘要内容"
+    "source": "新闻来源",
+    "date": "2025-03-11",
+    "snippet": "摘要"
+  }
+]
+```
+
+### 🎬 视频搜索
+
+```
+"帮我找 Python 教程视频"
+"搜索 AI 相关的视频"
+"找些教学视频"
+```
+
+**脚本调用：**
+```bash
+python scripts/duck_search_enhanced.py video "Python tutorial" 5
+```
+
+**输出格式：**
+```json
+[
+  {
+    "type": "video",
+    "title": "视频标题",
+    "url": "https://...",
+    "source": "视频来源",
+    "duration": "10:25",
+    "thumbnail": "缩略图 URL"
   }
 ]
 ```
@@ -85,13 +149,13 @@ python scripts/duck_search.py "AI tools" 10
 
 ## 💡 使用示例
 
-### 示例 1：搜索技术教程
+### 示例 1：文字搜索 - 技术教程
 
 **用户：** "帮我找个 Python 异步编程的教程"
 
 **技能执行：**
 ```bash
-python scripts/duck_search.py "Python async programming tutorial" 5
+python scripts/duck_search_enhanced.py text "Python async programming tutorial" 5
 ```
 
 **返回结果：**
@@ -100,16 +164,61 @@ python scripts/duck_search.py "Python async programming tutorial" 5
 > 2. [Python 官方文档](https://docs.python.org/3/library/asyncio.html)
 > ...
 
-### 示例 2：查找工具推荐
+### 示例 2：图片搜索 - 找素材
 
-**用户：** "有什么好的 AI IDE 推荐？"
+**用户：** "帮我找些 Python 的 logo 图片"
 
 **技能执行：**
 ```bash
-python scripts/duck_search.py "best AI IDE 2025" 5
+python scripts/duck_search_enhanced.py image "Python logo" 5
 ```
 
-### 示例 3：搜索后抓取详情
+**返回结果：**
+> 找到以下图片：
+> 1. Python 官方 Logo - 高清 PNG
+> 2. Python 图标 - SVG 格式
+> ...
+
+### 示例 3：新闻搜索 - 最新资讯
+
+**用户：** "看看今天有什么 AI 新闻"
+
+**技能执行：**
+```bash
+python scripts/duck_search_enhanced.py news "AI news" 5
+```
+
+**返回结果：**
+> 最新新闻：
+> 1. [新闻标题] - 来源：TechCrunch - 2025-03-11
+> 2. [新闻标题] - 来源：The Verge - 2025-03-11
+> ...
+
+### 示例 4：视频搜索 - 学习资源
+
+**用户：** "帮我找 Python 入门视频"
+
+**技能执行：**
+```bash
+python scripts/duck_search_enhanced.py video "Python tutorial for beginners" 5
+```
+
+**返回结果：**
+> 找到以下视频：
+> 1. [Python 入门教程] - YouTube - 时长：2:30:15
+> 2. [Python 快速入门] - Bilibili - 时长：45:20
+> ...
+
+### 示例 5：组合使用
+
+**用户：** "帮我研究一下 Tesla 的最新动态，包括新闻和相关图片"
+
+**技能执行：**
+1. 搜索新闻：`duck_search_enhanced.py news "Tesla news" 5`
+2. 搜索图片：`duck_search_enhanced.py image "Tesla latest" 5`
+3. 整合结果汇报
+
+### 示例 6：搜索后抓取详情
 
 **用户：** "帮我看看 Next.js 15 有什么新功能"
 

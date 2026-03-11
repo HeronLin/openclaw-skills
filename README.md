@@ -15,9 +15,15 @@ npx skills install https://github.com/HeronLin/openclaw-skills
 
 ### 🦆 duck-search ⭐ 推荐
 
-**完全免费**的网络搜索技能！
+**完全免费**的多功能搜索技能！
 
 **功能：**
+- 🔍 **文字搜索** - 网页、文档、教程
+- 🖼️ **图片搜索** - 找素材、壁纸、图标
+- 📰 **新闻搜索** - 最新资讯、行业动态
+- 🎬 **视频搜索** - 教程、演讲、演示
+
+**特点：**
 - ✅ 无需 API Key
 - ✅ 无需注册
 - ✅ 开箱即用
@@ -30,9 +36,10 @@ pip install ddgs
 
 **示例：**
 ```
-"帮我搜索 Python 教程"
-"查找 AI 工具推荐"
-"搜索 React hooks 文档"
+"帮我搜索 Python 教程"        # 文字搜索
+"找些 Python 的图片"           # 图片搜索
+"看看最新的 AI 新闻"           # 新闻搜索
+"帮我找 Python 入门视频"       # 视频搜索
 ```
 
 📖 [查看安装指南](./duck-search/INSTALL.md)
