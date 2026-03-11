@@ -74,6 +74,14 @@ pip install ddgs
 
 ### 🛠️ 工具类（29 个）
 
+#### 政策导向技能（符合"龙虾十条"）
+
+| 技能 | 描述 | 补贴方向 |
+|------|------|---------|
+| [smart-manufacturing](./smart-manufacturing/) | 智能制造工具包 | 智能制造 200 万 |
+| [smart-government](./smart-government/) | 智慧政务工具包 | 智慧政务 200 万 |
+| [smart-healthcare](./smart-healthcare/) | 智慧医疗工具包 | 智慧医疗 200 万 |
+
 | 技能 | 描述 | 状态 |
 |------|------|------|
 | [utility-weather](./utility-weather/) | 天气查询（免费，全球支持） | ✅ 已发布 |
@@ -105,6 +113,9 @@ pip install ddgs
 | [utility-alias](./utility-alias/) | 快捷别名 | ✅ 已发布 |
 | [utility-cmdhistory](./utility-cmdhistory/) | 命令历史 | ✅ 已发布 |
 | [utility-template](./utility-template/) | 快捷模板 | ✅ 已发布 |
+| [smart-manufacturing](./smart-manufacturing/) | 智能制造 | ✅ 已发布 |
+| [smart-government](./smart-government/) | 智慧政务 | ✅ 已发布 |
+| [smart-healthcare](./smart-healthcare/) | 智慧医疗 | ✅ 已发布 |
 
 ### 📈 金融类
 
