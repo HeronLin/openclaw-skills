@@ -13,27 +13,45 @@ npx skills install https://github.com/HeronLin/openclaw-skills
 
 ## 🚀 已发布的技能
 
+### 🦆 duck-search ⭐ 推荐
+
+**完全免费**的网络搜索技能！
+
+**功能：**
+- ✅ 无需 API Key
+- ✅ 无需注册
+- ✅ 开箱即用
+- ✅ 隐私保护
+
+**安装依赖：**
+```bash
+pip install ddgs
+```
+
+**示例：**
+```
+"帮我搜索 Python 教程"
+"查找 AI 工具推荐"
+"搜索 React hooks 文档"
+```
+
+📖 [查看安装指南](./duck-search/INSTALL.md)
+
+---
+
 ### 🔍 web-search
 
-网络搜索和信息获取技能
+专业的网络搜索技能（需要 Perplexity API Key）
 
 **功能：**
 - 使用 Perplexity API 进行高效网络搜索
 - 支持时间/语言/地区过滤
 - 网页内容抓取和提取为 Markdown
-- 内置搜索技巧和示例查询
-
-**使用场景：**
-- 查找技术文档和教程
-- 获取最新新闻和数据
-- 事实核查和资料研究
-- 产品对比和市场分析
 
 **示例：**
 ```
 "帮我搜索 2025 年最好的 AI IDE"
 "查找 Next.js 15 的迁移指南"
-"对比 Cursor 和 VS Code 的 AI 功能"
 ```
 
 📖 [查看详细文档](./web-search/SKILL.md)
@@ -42,7 +60,8 @@ npx skills install https://github.com/HeronLin/openclaw-skills
 
 | 技能 | 描述 | 状态 |
 |------|------|------|
-| [web-search](./web-search/) | 网络搜索工具 | ✅ 已发布 |
+| [duck-search](./duck-search/) | 免费网络搜索（无需 API） | ✅ 已发布 |
+| [web-search](./web-search/) | 网络搜索工具（需要 API Key） | ✅ 已发布 |
 
 ## 🛠️ 开发自己的技能
 
