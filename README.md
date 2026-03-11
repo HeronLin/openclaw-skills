@@ -72,7 +72,7 @@ pip install ddgs
 | [duck-search](./duck-search/) | 免费网络搜索（文字/图片/新闻/视频） | ✅ 已发布 |
 | [web-search](./web-search/) | 专业搜索（需要 Perplexity API Key） | ✅ 已发布 |
 
-### 🛠️ 工具类（15 个）
+### 🛠️ 工具类（17 个）
 
 | 技能 | 描述 | 状态 |
 |------|------|------|
@@ -91,6 +91,8 @@ pip install ddgs
 | [utility-json](./utility-json/) | JSON 处理工具 | ✅ 已发布 |
 | [utility-base64](./utility-base64/) | Base64 编解码 | ✅ 已发布 |
 | [utility-hash](./utility-hash/) | 哈希计算工具 | ✅ 已发布 |
+| [utility-ip](./utility-ip/) | IP 地址工具 | ✅ 已发布 |
+| [utility-speedtest](./utility-speedtest/) | 网络速度测试 | ✅ 已发布 |
 
 ### 📈 金融类
 
