@@ -72,13 +72,16 @@ pip install ddgs
 | [duck-search](./duck-search/) | 免费网络搜索（文字/图片/新闻/视频） | ✅ 已发布 |
 | [web-search](./web-search/) | 专业搜索（需要 Perplexity API Key） | ✅ 已发布 |
 
-### 🌤️ 工具类
+### 🛠️ 工具类
 
 | 技能 | 描述 | 状态 |
 |------|------|------|
 | [utility-weather](./utility-weather/) | 天气查询（免费，全球支持） | ✅ 已发布 |
 | [utility-image](./utility-image/) | 图片处理（压缩/转换/水印） | ✅ 已发布 |
 | [utility-convert](./utility-convert/) | 文件转换（PDF/Word/Excel 等） | ✅ 已发布 |
+| [utility-translate](./utility-translate/) | 翻译（100+ 语言，免费） | ✅ 已发布 |
+| [utility-todo](./utility-todo/) | 待办事项管理 | ✅ 已发布 |
+| [utility-qrcode](./utility-qrcode/) | 二维码生成 | ✅ 已发布 |
 
 ### 📈 金融类
 
