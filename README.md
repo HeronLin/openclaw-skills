@@ -82,6 +82,9 @@ pip install ddgs
 | [utility-translate](./utility-translate/) | 翻译（100+ 语言，免费） | ✅ 已发布 |
 | [utility-todo](./utility-todo/) | 待办事项管理 | ✅ 已发布 |
 | [utility-qrcode](./utility-qrcode/) | 二维码生成 | ✅ 已发布 |
+| [utility-note](./utility-note/) | 笔记/备忘录 | ✅ 已发布 |
+| [utility-converter](./utility-converter/) | 单位转换 | ✅ 已发布 |
+| [utility-random](./utility-random/) | 随机决策工具 | ✅ 已发布 |
 
 ### 📈 金融类
 
