@@ -72,7 +72,7 @@ pip install ddgs
 | [duck-search](./duck-search/) | 免费网络搜索（文字/图片/新闻/视频） | ✅ 已发布 |
 | [web-search](./web-search/) | 专业搜索（需要 Perplexity API Key） | ✅ 已发布 |
 
-### 🛠️ 工具类
+### 🛠️ 工具类（12 个）
 
 | 技能 | 描述 | 状态 |
 |------|------|------|
@@ -85,6 +85,9 @@ pip install ddgs
 | [utility-note](./utility-note/) | 笔记/备忘录 | ✅ 已发布 |
 | [utility-converter](./utility-converter/) | 单位转换 | ✅ 已发布 |
 | [utility-random](./utility-random/) | 随机决策工具 | ✅ 已发布 |
+| [utility-calendar](./utility-calendar/) | 日历/倒计时 | ✅ 已发布 |
+| [utility-password](./utility-password/) | 密码管理器 | ✅ 已发布 |
+| [utility-text](./utility-text/) | 文本处理工具 | ✅ 已发布 |
 
 ### 📈 金融类
 
