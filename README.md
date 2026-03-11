@@ -65,10 +65,26 @@ pip install ddgs
 
 ## 📋 技能列表
 
+### 🔍 搜索类
+
 | 技能 | 描述 | 状态 |
 |------|------|------|
-| [duck-search](./duck-search/) | 免费网络搜索（无需 API） | ✅ 已发布 |
-| [web-search](./web-search/) | 网络搜索工具（需要 API Key） | ✅ 已发布 |
+| [duck-search](./duck-search/) | 免费网络搜索（文字/图片/新闻/视频） | ✅ 已发布 |
+| [web-search](./web-search/) | 专业搜索（需要 Perplexity API Key） | ✅ 已发布 |
+
+### 🌤️ 工具类
+
+| 技能 | 描述 | 状态 |
+|------|------|------|
+| [utility-weather](./utility-weather/) | 天气查询（免费，全球支持） | ✅ 已发布 |
+| [utility-image](./utility-image/) | 图片处理（压缩/转换/水印） | ✅ 已发布 |
+| [utility-convert](./utility-convert/) | 文件转换（PDF/Word/Excel 等） | ✅ 已发布 |
+
+### 📈 金融类
+
+| 技能 | 描述 | 状态 |
+|------|------|------|
+| [akshare-stock](./akshare-stock/) | A 股分析（实时行情/基本面/板块） | ✅ 已发布 |
 
 ## 🛠️ 开发自己的技能
 
