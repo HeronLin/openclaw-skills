@@ -24,8 +24,8 @@ description: 日历/倒计时技能，支持日期查询、倒数日、重要日
 
 **脚本调用：**
 ```bash
-python scripts/calendar.py weekday 2026-12-25
-python scripts/calendar.py weekday
+python scripts/date_tools.py weekday 2026-12-25
+python scripts/date_tools.py weekday
 ```
 
 ### 计算相隔天数
@@ -37,7 +37,7 @@ python scripts/calendar.py weekday
 
 **脚本调用：**
 ```bash
-python scripts/calendar.py days 2026-01-01
+python scripts/date_tools.py days 2026-01-01
 ```
 
 ### 倒计时
@@ -49,7 +49,7 @@ python scripts/calendar.py days 2026-01-01
 
 **脚本调用：**
 ```bash
-python scripts/calendar.py countdown 2026-12-25 圣诞节
+python scripts/date_tools.py countdown 2026-12-25 圣诞节
 ```
 
 ### 管理重要日期
@@ -62,9 +62,9 @@ python scripts/calendar.py countdown 2026-12-25 圣诞节
 
 **脚本调用：**
 ```bash
-python scripts/calendar.py add 2026-12-25 圣诞节
-python scripts/calendar.py add 2026-05-20 纪念日 --recurring
-python scripts/calendar.py list
+python scripts/date_tools.py add 2026-12-25 圣诞节
+python scripts/date_tools.py add 2026-05-20 纪念日 --recurring
+python scripts/date_tools.py list
 ```
 
 ### 查看日历
@@ -75,7 +75,7 @@ python scripts/calendar.py list
 
 **脚本调用：**
 ```bash
-python scripts/calendar.py calendar 2026 12
+python scripts/date_tools.py calendar 2026 12
 ```
 
 ## 📊 输出示例

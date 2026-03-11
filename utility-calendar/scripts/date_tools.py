@@ -37,9 +37,17 @@ def get_weekday(date_str: str = None):
         date_obj = datetime.now()
     else:
         try:
-            date_obj = datetime.strptime(date_str, "%Y-%m-%d")
-        except:
-            return {"ok": False, "error": "日期格式错误，请使用 YYYY-MM-DD"}
+            # 支持多种格式
+            for fmt in ["%Y-%m-%d", "%Y/%m/%d", "%Y.%m.%d", "%Y 年%m 月%d 日"]:
+                try:
+                    date_obj = datetime.strptime(date_str, fmt)
+                    break
+                except ValueError:
+                    continue
+            else:
+                return {"ok": False, "error": "日期格式错误，请使用 YYYY-MM-DD"}
+        except Exception as e:
+            return {"ok": False, "error": f"日期解析失败：{e}"}
     
     weekdays = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
     weekday = weekdays[date_obj.weekday()]

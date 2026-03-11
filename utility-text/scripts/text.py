@@ -208,7 +208,9 @@ if __name__ == "__main__":
             sys.exit(1)
         text = sys.argv[2]
         format_type = sys.argv[3]
-        result = {"ok": True, "result": format_text(text, format_type)}
+        formatted = format_text(text, format_type)
+        print(f"🔄 文本格式化（{format_type}）\n\n结果：{formatted}")
+        sys.exit(0)
     
     elif command == "encode":
         if len(sys.argv) < 4:
