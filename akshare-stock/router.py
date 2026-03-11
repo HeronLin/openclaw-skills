@@ -144,6 +144,10 @@ def _classify_intent(query: str) -> str:
     # 绘图功能：K线图、走势、行情图
     if any(k in query for k in ["走势图", "趋势图", "行情图", "K线图", "k线图", "绘制", "画图", "图"]):
         return KLINE_CHART
+    # 排除持仓相关关键词
+    if any(k in query for k in ["持仓", "仓位", "我的股票"]):
+        return PORTFOLIO
+    
     if any(k in query for k in ["怎么样", "分析", "看下", "评估", "综合"]):
         return STOCK_OVERVIEW
     if any(k in query for k in ["资金流", "主力资金", "北向资金", "南向资金", "东向资金", "行业资金", "板块资金"]):
@@ -173,8 +177,8 @@ def _classify_intent(query: str) -> str:
     if any(k in query for k in ["介绍股市", "股市怎么用", "使用说明", "帮助", "help", "说明", "玩法", "有哪些功能"]):
         return HELP
 
-    # 持仓管理
-    if any(k in query for k in ["持仓", "仓位", "我的股票"]):
+    # 持仓管理（优先级高，放在前面）
+    if any(k in query for k in ["持仓", "仓位", "我的股票", "持仓分析", "我的持仓"]):
         return PORTFOLIO
 
     return INDEX_REALTIME

@@ -199,7 +199,7 @@ def dispatch(intent_obj, adapter: AkshareAdapter) -> Dict[str, Any]:
     if intent_obj.intent == PORTFOLIO:
         import subprocess
         import os
-        portfolio_script = os.path.join(os.path.dirname(__file__), "..", "a-stock-analysis", "scripts", "portfolio.py")
+        portfolio_script = os.path.join(os.path.dirname(__file__), "..", "a-stock-analysis", "scripts", "portfolio_fast.py")
         
         query = intent_obj.query or ""
         
@@ -244,10 +244,10 @@ def dispatch(intent_obj, adapter: AkshareAdapter) -> Dict[str, Any]:
                 return {"ok": False, "error": "请输入要删除的股票代码"}
         
         else:
-            # 显示持仓
+            # 默认显示持仓分析（包含总盈亏汇总）
             result = subprocess.run(
-                ["python3", portfolio_script, "show"],
-                capture_output=True, text=True, timeout=10
+                ["python3", portfolio_script, "analyze"],
+                capture_output=True, text=True, timeout=60
             )
             return {"ok": True, "source": "portfolio", "text": result.stdout or "暂无持仓"}
 
