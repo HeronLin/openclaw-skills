@@ -14,7 +14,11 @@ def translate_text(text: str, target_lang: str = "zh", source_lang: str = "auto"
     """使用 MyMemory 免费翻译 API"""
     try:
         # MyMemory 免费 API（无需 Key，每日 5000 字）
-        url = f"https://api.mymemory.translated.net/get?q={quote(text)}&langpair={source_lang}|{target_lang}"
+        # 如果 source_lang 是 auto，使用 detect 参数
+        if source_lang == "auto":
+            url = f"https://api.mymemory.translated.net/get?q={quote(text)}&langpair={target_lang}"
+        else:
+            url = f"https://api.mymemory.translated.net/get?q={quote(text)}&langpair={source_lang}|{target_lang}"
         
         resp = requests.get(url, timeout=10)
         resp.raise_for_status()
@@ -41,7 +45,7 @@ def detect_language(text: str) -> str:
     """检测语言（简化版）"""
     # 简单判断
     if any('\u4e00' <= c <= '\u9fff' for c in text):
-        return "zh"
+        return "zh-CN"
     elif any(ord(c) > 127 for c in text):
         return "auto"
     else:
@@ -89,7 +93,12 @@ if __name__ == "__main__":
     
     text = sys.argv[1]
     target = sys.argv[2] if len(sys.argv) > 2 else "zh"
-    source = detect_language(text) if len(sys.argv) < 3 else "auto"
+    
+    # 如果指定了源语言就用指定的，否则自动检测
+    if len(sys.argv) > 3:
+        source = sys.argv[3]
+    else:
+        source = detect_language(text)
     
     result = translate_text(text, target, source)
     print(format_translation(result))
